@@ -1,0 +1,28 @@
+﻿<Window x:Class="GeliGider_WPF.SifreGuncelle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeliGider_WPF"
+        mc:Ignorable="d"
+        Title="Şifre Güncelle" Height="302.635" Width="479.571" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid Margin="0,0,0,-1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF1B263A" Offset="1"/>
+                <GradientStop Color="#FF99B8EE"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label x:Name="lbl_Sifre" Content="Şifre :" HorizontalAlignment="Left" Margin="43,43,0,0" VerticalAlignment="Top" Height="30" Width="69" FontWeight="Bold" FontStyle="Italic"/>
+        <Label x:Name="lbl_SifreOnay" Content="Şifre Onay :" HorizontalAlignment="Left" Margin="43,96,0,0" VerticalAlignment="Top" Height="30" Width="90" FontWeight="Bold" FontStyle="Italic"/>
+        <PasswordBox x:Name="pb_Sifre" HorizontalAlignment="Left" Margin="133,43,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
+        <PasswordBox x:Name="pb_SifreOnay" HorizontalAlignment="Left" Margin="133,96,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
+        <Button x:Name="button" Content="KAYDET" HorizontalAlignment="Left" Margin="154,153,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold" FontStyle="Italic" Height="29" Click="button_Click"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="250" Margin="253,25,-9,0" VerticalAlignment="Top" Width="230" Source="SifreUnuttum.png"/>
+        <TextBox x:Name="txtVeri" HorizontalAlignment="Left" Height="23" Margin="96,228,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

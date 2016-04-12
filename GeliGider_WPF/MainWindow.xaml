@@ -1,0 +1,29 @@
+﻿<Window x:Class="GeliGider_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeliGider_WPF"
+        mc:Ignorable="d"
+        Title="Hesappro" Height="569.089" Width="532.934" ResizeMode="NoResize">
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="541" VerticalAlignment="Top" Width="527" Source="AnaEkran.jpg"/>
+        <Label x:Name="lbl_kullaniciAdi" Content="Kullanıcı Adı :" HorizontalAlignment="Left" Margin="104.555,181.753,0,0" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" RenderTransformOrigin="0.671,0.541"/>
+        <TextBox x:Name="tb_KullaniciAdi" Height="23" Margin="208.187,184.713,137.813,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_Sifre" Content="Şifre :" HorizontalAlignment="Left" Margin="121.636,225.268,0,248.497" FontWeight="Bold" FontStyle="Italic" Width="46.093"/>
+        <PasswordBox x:Name="tb_Sifre" Margin="208.187,225.268,138.405,0" Height="23" VerticalAlignment="Top"/>
+        <Button x:Name="btn_YeniUye" Content="Yeni Üye" HorizontalAlignment="Left" Margin="96.133,0,0,193.15" VerticalAlignment="Bottom" Width="104.946" RenderTransformOrigin="0.212,-0.128" FontWeight="Bold" FontStyle="Italic" Click="btn_YeniUye_Click"/>
+        <Button x:Name="btn_Giris" Content="GİRİŞ" Margin="208.16,0,206.828,192.213" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" FontStyle="Italic" Click="btn_Giris_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.321"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btn_SifremiUnuttum" Content="Şifremi Unuttum" HorizontalAlignment="Right" Margin="0,0,95.358,193.15" VerticalAlignment="Bottom" Width="104.946" FontWeight="Bold" FontStyle="Italic" Click="btn_SifremiUnuttum_Click"/>
+        <Label x:Name="lbl_Hesappro" Content="HESAPPRO" HorizontalAlignment="Left" Margin="188.214,92,0,0" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" FontSize="29.333" Foreground="#FF0D132E"/>
+    </Grid>
+</Window>

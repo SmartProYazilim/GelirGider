@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeliGider_WPF", "GeliGider_WPF\GeliGider_WPF.csproj", "{B04CE2E4-52BF-4CB5-8CD7-75604E09D249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mainClass", "mainClass\mainClass.csproj", "{57B5E0FD-2A78-4243-800F-427DFA894CBC}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.matanist.com:8080/tfs/122collection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = GeliGider_WPF\\GeliGider_WPF.csproj
+		SccProjectName1 = GeliGider_WPF
+		SccLocalPath1 = GeliGider_WPF
+		SccProjectUniqueName2 = mainClass\\mainClass.csproj
+		SccProjectName2 = mainClass
+		SccLocalPath2 = mainClass
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B04CE2E4-52BF-4CB5-8CD7-75604E09D249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B04CE2E4-52BF-4CB5-8CD7-75604E09D249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B04CE2E4-52BF-4CB5-8CD7-75604E09D249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B04CE2E4-52BF-4CB5-8CD7-75604E09D249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B5E0FD-2A78-4243-800F-427DFA894CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B5E0FD-2A78-4243-800F-427DFA894CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B5E0FD-2A78-4243-800F-427DFA894CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B5E0FD-2A78-4243-800F-427DFA894CBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

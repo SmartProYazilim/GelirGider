@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HesapProModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Gelirler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <Property Name="GelirTipiID" Type="Int32" />
+    <Property Name="GelirAciklama" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="GelirTarihi" Type="DateTime" />
+    <Property Name="GelenPara" Type="Decimal" Precision="53" Scale="0" />
+    <NavigationProperty Name="GelirTipleri" Relationship="Self.FK_Gelirler_0_0" FromRole="Gelirler" ToRole="GelirTipleri" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_Gelirler_1_0" FromRole="Gelirler" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="GelirTipleri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="GelirTipi" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Gelirlers" Relationship="Self.FK_Gelirler_0_0" FromRole="GelirTipleri" ToRole="Gelirler" />
+  </EntityType>
+  <EntityType Name="Giderler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <Property Name="GiderTipiID" Type="Int32" />
+    <Property Name="GiderAciklama" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="GiderTarihi" Type="DateTime" />
+    <Property Name="GidenPara" Type="Decimal" Precision="53" Scale="0" />
+    <NavigationProperty Name="GiderTipleri" Relationship="Self.FK_Giderler_0_0" FromRole="Giderler" ToRole="GiderTipleri" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_Giderler_1_0" FromRole="Giderler" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="GiderTipleri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="GiderTipleri1" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Giderlers" Relationship="Self.FK_Giderler_0_0" FromRole="GiderTipleri" ToRole="Giderler" />
+  </EntityType>
+  <EntityType Name="Kullanicilar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="kadi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="750" FixedLength="false" Unicode="false" />
+    <Property Name="telefon" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="g_soru" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="g_cevabı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="adsoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fotograf" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Gelirlers" Relationship="Self.FK_Gelirler_1_0" FromRole="Kullanicilar" ToRole="Gelirler" />
+    <NavigationProperty Name="Giderlers" Relationship="Self.FK_Giderler_1_0" FromRole="Kullanicilar" ToRole="Giderler" />
+  </EntityType>
+  <Association Name="FK_Gelirler_0_0">
+    <End Role="GelirTipleri" Type="Self.GelirTipleri" Multiplicity="0..1" />
+    <End Role="Gelirler" Type="Self.Gelirler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GelirTipleri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Gelirler">
+        <PropertyRef Name="GelirTipiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gelirler_1_0">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="Gelirler" Type="Self.Gelirler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Gelirler">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Giderler_0_0">
+    <End Role="GiderTipleri" Type="Self.GiderTipleri" Multiplicity="0..1" />
+    <End Role="Giderler" Type="Self.Giderler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GiderTipleri">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Giderler">
+        <PropertyRef Name="GiderTipiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Giderler_1_0">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="Giderler" Type="Self.Giderler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Giderler">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HesapProEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Gelirlers" EntityType="Self.Gelirler" />
+    <EntitySet Name="GelirTipleris" EntityType="Self.GelirTipleri" />
+    <EntitySet Name="Giderlers" EntityType="Self.Giderler" />
+    <EntitySet Name="GiderTipleris" EntityType="Self.GiderTipleri" />
+    <EntitySet Name="Kullanicilars" EntityType="Self.Kullanicilar" />
+    <AssociationSet Name="FK_Gelirler_0_0" Association="Self.FK_Gelirler_0_0">
+      <End Role="GelirTipleri" EntitySet="GelirTipleris" />
+      <End Role="Gelirler" EntitySet="Gelirlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gelirler_1_0" Association="Self.FK_Gelirler_1_0">
+      <End Role="Kullanicilar" EntitySet="Kullanicilars" />
+      <End Role="Gelirler" EntitySet="Gelirlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Giderler_0_0" Association="Self.FK_Giderler_0_0">
+      <End Role="GiderTipleri" EntitySet="GiderTipleris" />
+      <End Role="Giderler" EntitySet="Giderlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Giderler_1_0" Association="Self.FK_Giderler_1_0">
+      <End Role="Kullanicilar" EntitySet="Kullanicilars" />
+      <End Role="Giderler" EntitySet="Giderlers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

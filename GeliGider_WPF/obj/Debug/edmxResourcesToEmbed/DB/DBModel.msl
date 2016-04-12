@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HesapProModelStoreContainer" CdmEntityContainer="HesapProEntities">
+    <EntitySetMapping Name="Gelirler">
+      <EntityTypeMapping TypeName="HesapProModel.Gelirler">
+        <MappingFragment StoreEntitySet="Gelirler">
+          <ScalarProperty Name="ParaCinsi" ColumnName="ParaCinsi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+          <ScalarProperty Name="GelirTipiID" ColumnName="GelirTipiID" />
+          <ScalarProperty Name="GelenPara" ColumnName="GelenPara" />
+          <ScalarProperty Name="GelirTarihi" ColumnName="GelirTarihi" />
+          <ScalarProperty Name="GelirAciklama" ColumnName="GelirAciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GelirTipleri">
+      <EntityTypeMapping TypeName="HesapProModel.GelirTipleri">
+        <MappingFragment StoreEntitySet="GelirTipleri">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GelirTipi" ColumnName="GelirTipi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Giderler">
+      <EntityTypeMapping TypeName="HesapProModel.Giderler">
+        <MappingFragment StoreEntitySet="Giderler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+          <ScalarProperty Name="GiderTipiID" ColumnName="GiderTipiID" />
+          <ScalarProperty Name="GiderAciklama" ColumnName="GiderAciklama" />
+          <ScalarProperty Name="GiderTarihi" ColumnName="GiderTarihi" />
+          <ScalarProperty Name="GidenPara" ColumnName="GidenPara" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiderTipleri">
+      <EntityTypeMapping TypeName="HesapProModel.GiderTipleri">
+        <MappingFragment StoreEntitySet="GiderTipleri">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GiderTipleri1" ColumnName="GiderTipleri" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanicilar">
+      <EntityTypeMapping TypeName="HesapProModel.Kullanicilar">
+        <MappingFragment StoreEntitySet="Kullanicilar">
+          <ScalarProperty Name="fotograf" ColumnName="fotograf" />
+          <ScalarProperty Name="adsoyad" ColumnName="adsoyad" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="kadi" ColumnName="kadi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="g_soru" ColumnName="g_soru" />
+          <ScalarProperty Name="g_cevabı" ColumnName="g_cevabı" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

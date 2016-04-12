@@ -1,0 +1,13 @@
+﻿<Window x:Name="gelirGiderWindow" x:Class="GeliGider_WPF.gelirGiderGor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeliGider_WPF"
+        mc:Ignorable="d"
+        Title="gelirGiderGor" Height="385" Width="910.312" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="334" Width="882"/>
+
+    </Grid>
+</Window>
